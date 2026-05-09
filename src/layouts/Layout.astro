@@ -1,23 +1,32 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header/Header.jsx";
+import Hero from "../components/Hero/Hero";
+import SelfRecognition from "../components/SelfReconition/SelfRecognition";
+import SectionDivider from "../components/SectionDivider/SectionDivider.astro";
+import SelfCarePractice from "../components/SelfCarePractice/SelfCarePractice";
+import TherapyHelp from "../components/TherapyHelp/TherapyHelp";
+
+const { title = "Guilherme Almeida | Psicólogo" } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>const {title} = Astro.props;</title>
 	</head>
+
 	<body>
-		<slot />
+		<Header client:load />
+		<Hero />
+		<SelfRecognition />
+		<SectionDivider from="alt" to="main" height={62} />
+		<SelfCarePractice />
+		<TherapyHelp />
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

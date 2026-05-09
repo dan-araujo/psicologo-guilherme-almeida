@@ -1,0 +1,31 @@
+:root {
+  --color-background-main: #f1f0eb;
+  --color-background-alt: #f7f6f6;
+  --color-primary: #365a6c;
+  --color-secondary: #6c9185;
+  --color-support: #7fa3a5;
+  --color-border: #bec5c3;
+  --color-text: #243c48;
+  --color-accent: #e86f6c;
+  --color-white: #ffffff;
+
+  --font-heading: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+
+  --container-width: 1180px;
+  --radius-pill: 999px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background-main);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
