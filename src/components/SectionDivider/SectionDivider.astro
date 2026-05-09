@@ -1,0 +1,94 @@
+---
+import rawDivider from "../../assets/section-divider.svg?raw";
+
+type ColorToken =
+  | "main"
+  | "alt"
+  | "primary"
+  | "secondary"
+  | "support"
+  | "border"
+  | "text"
+  | "white";
+
+interface Props {
+  from?: ColorToken;
+  to?: ColorToken;
+  fromColor?: string;
+  toColor?: string;
+  height?: number | string;
+  flip?: boolean;
+  className?: string;
+}
+
+const palette: Record<ColorToken, string> = {
+  main: "#F1F0EB",
+  alt: "#F7F6F6",
+  primary: "#365A6C",
+  secondary: "#6C9185",
+  support: "#7FA3A5",
+  border: "#BEC5C3",
+  text: "#243C48",
+  white: "#FFFFFF",
+};
+
+const {
+  from = "secondary",
+  to = "main",
+  fromColor,
+  toColor,
+  height = 121,
+  flip = false,
+  className = "",
+} = Astro.props as Props;
+
+const resolvedFromColor = fromColor ?? palette[from];
+const resolvedToColor = toColor ?? palette[to];
+
+const normalizedHeight = typeof height === "number" ? `${height}px` : height;
+
+const dividerSvg = rawDivider
+  .replace(/<defs>[\s\S]*?<\/defs>/, "")
+  .replace(
+    /<svg\b([^>]*)>/,
+    `<svg$1 viewBox="0 0 1440 121" preserveAspectRatio="none" class="section-divider__svg" focusable="false">`,
+  )
+  .replace(/fill="url\(#gradientColor\)"/g, `fill="${resolvedFromColor}"`)
+  .replace(/<g fill="#fff">/g, `<g fill="${resolvedToColor}">`);
+---
+
+<div
+  class:list={["section-divider", { "section-divider--flip": flip }, className]}
+  style={`--divider-height: ${normalizedHeight}; --divider-bg: ${resolvedToColor};`}
+  aria-hidden="true"
+  set:html={dividerSvg}
+/>
+
+<style>
+  .section-divider {
+    width: 100%;
+    height: var(--divider-height);
+    overflow: hidden;
+    line-height: 0;
+    background: var(--divider-bg);
+    pointer-events: none;
+    margin-top: -1px;
+    margin-bottom: -1px;
+  }
+
+  :global(.section-divider__svg) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .section-divider--flip {
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: 640px) {
+    .section-divider {
+      height: min(var(--divider-height), 86px);
+    }
+  }
+</style>
