@@ -1,0 +1,470 @@
+.hero {
+    position: relative;
+    overflow-x: clip;
+    background: var(--color-background-main);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: auto -120px -180px auto;
+    width: 420px;
+    height: 420px;
+    border: 1px solid rgba(190, 197, 195, 0.65);
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.container {
+    width: min(100% - 48px, var(--container-width));
+    min-height: calc(100svh - 86px);
+    margin: 0 auto;
+    padding: 72px 0 88px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.78fr);
+    align-items: center;
+    gap: 72px;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    color: var(--color-secondary);
+    font-size: 0.76rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.eyebrow::before {
+    content: "";
+    width: 48px;
+    height: 1px;
+    background: var(--color-secondary);
+}
+
+.title {
+    max-width: 740px;
+    margin: 0;
+    color: var(--color-text);
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 6.4vw, 6.4rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.description {
+    max-width: 620px;
+    margin: 32px 0 0;
+    color: rgba(36, 60, 72, 0.86);
+    font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+    line-height: 1.75;
+}
+
+.professionalInfo {
+    max-width: 620px;
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.professionalInfo span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.34);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.actions {
+    margin-top: 38px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.primaryCta,
+.secondaryCta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 26px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition:
+        background 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+.primaryCta {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.primaryCta:hover {
+    background: var(--color-secondary);
+    transform: translateY(-1px);
+}
+
+.secondaryCta {
+    border: 1px solid var(--color-border);
+    color: var(--color-primary);
+    background: transparent;
+}
+
+.secondaryCta:hover {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+    transform: translateY(-1px);
+}
+
+.visualArea {
+    position: relative;
+    min-height: 620px;
+}
+
+.sideBand {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44%;
+    height: 100%;
+    border-radius: 42px;
+    background: var(--color-primary);
+}
+
+.imageCard {
+    position: absolute;
+    inset: 46px 42px 46px 0;
+    padding: 16px;
+    border: 1px solid rgba(190, 197, 195, 0.8);
+    border-radius: 42px;
+    background: rgba(247, 246, 246, 0.72);
+    backdrop-filter: blur(10px);
+}
+
+.imagePlaceholder {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    border-radius: 30px;
+    background:
+        linear-gradient(135deg,
+            rgba(108, 145, 133, 0.2),
+            rgba(54, 90, 108, 0.18)),
+        var(--color-background-alt);
+    color: rgba(36, 60, 72, 0.64);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.floatingCard {
+    position: absolute;
+    left: -26px;
+    bottom: 78px;
+    max-width: 260px;
+    padding: 24px 26px;
+    border: 1px solid rgba(190, 197, 195, 0.8);
+    border-radius: 30px;
+    background: var(--color-background-alt);
+    box-shadow: 0 24px 60px rgba(36, 60, 72, 0.12);
+}
+
+.floatingLabel {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--color-secondary);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.floatingCard p {
+    margin: 0;
+    color: var(--color-text);
+    font-family: var(--font-serif);
+    font-size: 1.34rem;
+    line-height: 1.18;
+}
+
+.heroImage {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+@media (max-width: 980px) {
+    .container {
+        width: min(100% - 64px, var(--container-width));
+        min-height: auto;
+        padding: 56px 0 72px;
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .description {
+        max-width: 720px;
+    }
+
+    .visualArea {
+        position: relative;
+        min-height: 520px;
+        max-width: 430px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .sideBand {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 42%;
+        height: 102%;
+        border-radius: 34px;
+        background: var(--color-primary);
+    }
+
+    .imageCard {
+        position: absolute;
+        inset: 32px 28px 10px 10px;
+        width: auto;
+        aspect-ratio: auto;
+        padding: 12px;
+        border-radius: 34px;
+        overflow: hidden;
+    }
+
+    .heroImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 24px;
+    }
+
+    .floatingCard {
+        left: -18px;
+        bottom: 58px;
+        max-width: 220px;
+        padding: 20px 22px;
+        border-radius: 24px;
+    }
+
+    .floatingCard p {
+        font-size: 1.14rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: min(100% - 48px, var(--container-width));
+        padding: 40px 0 56px;
+        gap: 36px;
+    }
+
+    .eyebrow {
+        margin-bottom: 20px;
+        font-size: 0.68rem;
+    }
+
+    .eyebrow::before {
+        width: 32px;
+    }
+
+    .title {
+        font-size: clamp(2.45rem, 11.5vw, 3.3rem);
+        line-height: 1.04;
+        letter-spacing: -0.04em;
+    }
+
+    .description {
+        margin-top: 22px;
+        font-size: 0.96rem;
+        line-height: 1.72;
+    }
+
+    .professionalInfo {
+        margin-top: 24px;
+        display: grid;
+        gap: 10px;
+    }
+
+    .professionalInfo span {
+        width: fit-content;
+        max-width: 100%;
+        min-height: 32px;
+        padding: 0 13px;
+        font-size: 0.66rem;
+        line-height: 1.2;
+    }
+
+    .actions {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .primaryCta,
+    .secondaryCta {
+        width: 100%;
+        max-width: 100%;
+        min-height: 54px;
+        padding: 0 18px;
+        box-sizing: border-box;
+        text-align: center;
+        white-space: normal;
+        line-height: 1.25;
+    }
+
+    .visualArea {
+        position: relative;
+        min-height: 430px;
+        max-width: 310px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .sideBand {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 95%;
+        border-radius: 28px;
+        background: var(--color-primary);
+    }
+
+    .imageCard {
+        position: absolute;
+        inset: 24px 18px 38px 0;
+        width: auto;
+        aspect-ratio: auto;
+        padding: 9px;
+        border-radius: 26px;
+        overflow: hidden;
+    }
+
+    .heroImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 18px;
+    }
+
+    .floatingCard {
+        left: -10px;
+        right: auto;
+        bottom: 42px;
+        max-width: 190px;
+        padding: 16px 18px;
+        border-radius: 20px;
+    }
+
+    .floatingLabel {
+        margin-bottom: 8px;
+        font-size: 0.58rem;
+    }
+
+    .floatingCard p {
+        font-size: 0.98rem;
+        line-height: 1.18;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        width: min(100% - 40px, var(--container-width));
+        padding-top: 34px;
+    }
+
+    .title {
+        font-size: clamp(2.25rem, 10.8vw, 2.85rem);
+        line-height: 1.06;
+        letter-spacing: -0.035em;
+    }
+
+    .description {
+        font-size: 0.94rem;
+    }
+
+    .primaryCta,
+    .secondaryCta {
+        min-height: 52px;
+        font-size: 0.68rem;
+        padding: 0 14px;
+    }
+
+    .visualArea {
+        min-height: 390px;
+        max-width: 280px;
+    }
+
+    .sideBand {
+        width: 38%;
+        height: 95%;
+        border-radius: 24px;
+    }
+
+    .imageCard {
+        inset: 22px 14px 34px 0;
+        padding: 8px;
+        border-radius: 24px;
+    }
+
+    .heroImage {
+        border-radius: 17px;
+    }
+
+    .floatingCard {
+        left: -8px;
+        bottom: 38px;
+        max-width: 178px;
+        padding: 14px 16px;
+        border-radius: 18px;
+    }
+
+    .floatingLabel {
+        font-size: 0.55rem;
+    }
+
+    .floatingCard p {
+        font-size: 0.92rem;
+    }
+}
