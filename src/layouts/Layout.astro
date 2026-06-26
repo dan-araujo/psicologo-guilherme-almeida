@@ -6,8 +6,22 @@ import SelfRecognition from "../components/SelfReconition/SelfRecognition";
 import SectionDivider from "../components/SectionDivider/SectionDivider.astro";
 import SelfCarePractice from "../components/SelfCarePractice/SelfCarePractice";
 import TherapyHelp from "../components/TherapyHelp/TherapyHelp";
+import Approach from "../components/Approach/Approach";
+import About from "../components/About/About";
 
-const { title = "Guilherme Almeida | Psicólogo" } = Astro.props;
+interface Props {
+	title?: string;
+	description?: string;
+	canonicalUrl?: string;
+}
+
+const {
+	title = "Guilherme Almeida | Psicólogo — Psicoterapia em Recife",
+	description = "Atendimento psicológico para adultos. Terapia Cognitivo-Comportamental com foco em autocuidado, ansiedade, estresse e relações. Agende pelo WhatsApp.",
+	canonicalUrl = "https://guilherme-almeida-psicologo.com.br/",
+} = Astro.props;
+
+const ogImage = "/og-image.jpg";
 ---
 
 <!doctype html>
@@ -15,17 +29,41 @@ const { title = "Guilherme Almeida | Psicólogo" } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>const {title} = Astro.props;</title>
+
+		<!-- SEO básico -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href={canonicalUrl} />
+
+		<!-- Open Graph (WhatsApp, Instagram, redes sociais) -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:locale" content="pt_BR" />
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 
 	<body>
 		<Header client:load />
-		<Hero />
-		<SelfRecognition />
-		<SectionDivider from="alt" to="main" height={62} />
-		<SelfCarePractice />
-		<TherapyHelp />
 		<main>
+			<Hero />
+			<SelfRecognition />
+			<SelfCarePractice />
+			<TherapyHelp />
+			<SectionDivider from="main" to="primary" height={80} />
+			<Approach />
+			<SectionDivider from="primary" to="main" height={80} />
+			<About />
 			<slot />
 		</main>
 	</body>
