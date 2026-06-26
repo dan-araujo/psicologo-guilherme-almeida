@@ -69,7 +69,7 @@ function SituationIcon({ children }) {
 
 export default function SelfRecognition() {
     return (
-        <section className={styles.section} id="terapia" aria-labelledby="self-recognition-title">
+        <section className={styles.section} id="therapy" aria-labelledby="self-recognition-title">
             <div className={styles.container}>
                 <div className={styles.header}>
                     <span className={styles.eyebrow}>Terapia e vida cotidiana</span>

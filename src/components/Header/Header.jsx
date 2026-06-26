@@ -2,13 +2,13 @@ import { useState } from "react";
 import styles from "./Header.module.css";
 
 const navLinks = [
-  { label: "Início", href: "#inicio" },
-  { label: "Terapia", href: "#terapia" },
-  { label: "Autocuidado", href: "#autocuidado" },
-  { label: "Abordagem", href: "#abordagem" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Dúvidas", href: "#duvidas" },
-  { label: "Contato", href: "#contato" },
+  { label: "Início", href: "#home" },
+  { label: "Terapia", href: "#therapy" },
+  { label: "Autocuidado", href: "#self-care" },
+  { label: "Abordagem", href: "#approach" },
+  { label: "Sobre", href: "#about" },
+  { label: "Dúvidas", href: "#faq" },
+  { label: "Contato", href: "#contact" },
 ];
 
 const whatsappMessage = encodeURIComponent(

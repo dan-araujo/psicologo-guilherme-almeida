@@ -27,7 +27,7 @@ export default function TherapyHelp() {
     return (
         <section
             className={styles.section}
-            id="terapia-ajuda"
+            id="therapy-help"
             aria-labelledby="therapy-help-title"
         >
             <div className={styles.container}>

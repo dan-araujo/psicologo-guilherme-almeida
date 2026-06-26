@@ -1,15 +1,9 @@
 import styles from "./Hero.module.css";
-import guilhermePhoto from "../../assets/images/foto-guilherme.jpg";
-
-const whatsappMessage = encodeURIComponent(
-  "Olá, Guilherme. Gostaria de saber mais sobre o atendimento psicológico."
-);
-
-const whatsappUrl = `https://wa.me/5581992951734?text=${whatsappMessage}`;
+import { WHATSAPP_URL } from "../../config.js";
 
 export default function Hero() {
   return (
-    <section className={styles.hero} id="inicio" aria-labelledby="hero-title">
+    <section className={styles.hero} id="home" aria-labelledby="hero-title">
       <div className={styles.container}>
         <div className={styles.content}>
           <span className={styles.eyebrow}>Guilherme Almeida</span>
@@ -34,26 +28,31 @@ export default function Hero() {
           </div>
 
           <div className={styles.actions}>
-            <a href={whatsappUrl} className={styles.primaryCta}>
+            <a href={WHATSAPP_URL} className={styles.primaryCta}>
               Agendar pelo WhatsApp
             </a>
 
-            <a href="#abordagem" className={styles.secondaryCta}>
+            <a href="#approach" className={styles.secondaryCta}>
               Conhecer a abordagem
             </a>
           </div>
         </div>
-
         <div className={styles.visualArea} aria-hidden="true">
           <div className={styles.sideBand} />
 
           <div className={styles.imageCard}>
             <div className={styles.imagePlaceholder}>
-              <img
-                src={guilhermePhoto.src}
-                alt="Guilherme Almeida, psicólogo"
-                className={styles.heroImage}
-              />
+              <video
+                className={styles.heroVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+              >
+                <source src="/animations/tcc.mp4" type="video/mp4" />
+                <source src="/animations/tcc.webm" type="video/webm" />
+              </video>
             </div>
           </div>
 

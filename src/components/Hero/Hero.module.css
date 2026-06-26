@@ -145,7 +145,7 @@
 
 .visualArea {
     position: relative;
-    min-height: 620px;
+    min-height: 500px;
 }
 
 .sideBand {
@@ -174,22 +174,14 @@
     display: grid;
     place-items: center;
     border-radius: 30px;
-    background:
-        linear-gradient(135deg,
-            rgba(108, 145, 133, 0.2),
-            rgba(54, 90, 108, 0.18)),
-        var(--color-background-alt);
-    color: rgba(36, 60, 72, 0.64);
-    font-size: 0.82rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    background: var(--color-white);
+    overflow: hidden;
 }
 
 .floatingCard {
     position: absolute;
     left: -26px;
-    bottom: 78px;
+    bottom: 20px;
     max-width: 260px;
     padding: 24px 26px;
     border: 1px solid rgba(190, 197, 195, 0.8);
@@ -224,6 +216,15 @@
     border-radius: 30px;
 }
 
+.heroVideo {
+    width: 100%;
+    height: 80%;
+    display: block;
+    object-fit: contain;
+    object-position: top center;
+    border-radius: 30px;
+}
+
 @media (max-width: 980px) {
     .container {
         width: min(100% - 64px, var(--container-width));
@@ -243,27 +244,23 @@
 
     .visualArea {
         position: relative;
-        min-height: 520px;
+        min-height: 420px;
         max-width: 430px;
         width: 100%;
         margin: 0 auto;
     }
 
     .sideBand {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 42%;
-        height: 102%;
+        width: 38%;
+        height: 98%;
         border-radius: 34px;
         background: var(--color-primary);
     }
 
     .imageCard {
         position: absolute;
-        inset: 32px 28px 10px 10px;
+        inset: 32px 28px 32px 10px;
         width: auto;
-        aspect-ratio: auto;
         padding: 12px;
         border-radius: 34px;
         overflow: hidden;
@@ -279,7 +276,7 @@
 
     .floatingCard {
         left: -18px;
-        bottom: 58px;
+        bottom: 14px;
         max-width: 220px;
         padding: 20px 22px;
         border-radius: 24px;
@@ -354,7 +351,7 @@
 
     .visualArea {
         position: relative;
-        min-height: 430px;
+        min-height: 340px;
         max-width: 310px;
         width: 100%;
         margin: 0 auto;
@@ -364,25 +361,23 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: 40%;
-        height: 95%;
+        width: 30%;
+        height: 100%;
         border-radius: 28px;
         background: var(--color-primary);
     }
 
     .imageCard {
         position: absolute;
-        inset: 24px 18px 38px 0;
+        inset: 14px 18px 14px 0;
         width: auto;
-        aspect-ratio: auto;
-        padding: 9px;
         border-radius: 26px;
         overflow: hidden;
     }
 
     .heroImage {
         width: 100%;
-        height: 100%;
+        height: 50%;
         object-fit: cover;
         object-position: center top;
         border-radius: 18px;
@@ -391,7 +386,7 @@
     .floatingCard {
         left: -10px;
         right: auto;
-        bottom: 42px;
+        bottom: 8px;
         max-width: 190px;
         padding: 16px 18px;
         border-radius: 20px;
@@ -432,20 +427,21 @@
     }
 
     .visualArea {
-        min-height: 390px;
+        min-height: 300px;
         max-width: 280px;
     }
 
     .sideBand {
-        width: 38%;
-        height: 95%;
+        width: 30%;
+        height: 100%;
         border-radius: 24px;
     }
 
     .imageCard {
-        inset: 22px 14px 34px 0;
+        inset: 20px 14px 20px 0;
         padding: 8px;
         border-radius: 24px;
+        overflow: hidden;
     }
 
     .heroImage {
@@ -454,7 +450,7 @@
 
     .floatingCard {
         left: -8px;
-        bottom: 38px;
+        bottom: 6px;
         max-width: 178px;
         padding: 14px 16px;
         border-radius: 18px;

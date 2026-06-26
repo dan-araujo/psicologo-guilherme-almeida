@@ -37,7 +37,7 @@ export default function SelfCarePractice() {
     return (
         <section
             className={styles.section}
-            id="autocuidado"
+            id="self-care"
             aria-labelledby="self-care-practice-title"
         >
             <div className={styles.container}>
