@@ -1,0 +1,122 @@
+.section {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 96px 24px;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+.header {
+    margin-bottom: 48px;
+}
+
+.eyebrow {
+    display: block;
+    font-size: 0.90rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 16px;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--color-white);
+    line-height: 1.1;
+    margin: 0;
+}
+
+.quote {
+    border-left: 2px solid var(--color-secondary);
+    padding-left: 24px;
+    margin: 48px 0 40px 0;
+}
+
+.quote p {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-style: italic;
+    color: var(--color-white);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.description {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 640px;
+    margin: 0 0 50px 0;
+}
+
+.pillars {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.pillar {
+    padding: 32px 24px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pillar:last-child {
+    border-right: none;
+}
+
+.pillarNumber {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--color-secondary);
+}
+
+.pillarTitle {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--color-white);
+    display: block;
+}
+
+@media(max-width: 900px) {
+    .pillars {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pillar {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .pillar:nth-child(even) {
+        border-right: none;
+    }
+}
+
+@media(max-width: 640px) {
+    .section {
+        padding: 72px 20px;
+    }
+
+    .pillar {
+        grid-template-columns: 1fr;
+    }
+
+    .pillar:last-child {
+        border-bottom: none;
+    }
+}
