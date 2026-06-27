@@ -1,5 +1,5 @@
 import styles from "./Hero.module.css";
-import { WHATSAPP_URL } from "../../config.js";
+import { WHATSAPP_URL, CRP } from "../../config.js";
 
 export default function Hero() {
   return (
@@ -24,11 +24,11 @@ export default function Hero() {
             <span>Análise do Comportamento</span>
             <span>Direcionada a Orientação Parental</span>
             <span>Terapia dos Esquemas</span>
-            <span>CRP 00/00000</span>
+            <span>CRP {CRP}</span>
           </div>
 
           <div className={styles.actions}>
-            <a href={WHATSAPP_URL} className={styles.primaryCta}>
+            <a href={WHATSAPP_URL} className={styles.primaryCta} target="_blank" rel="noopener noreferrer">
               Agendar pelo WhatsApp
             </a>
 

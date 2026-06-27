@@ -1,13 +1,13 @@
 import styles from "./About.module.css";
 import guilhermePhoto from "../../assets/images/foto-guilherme.jpg";
-import { WHATSAPP_URL } from "../../config.js";
+import { WHATSAPP_URL, CRP } from "../../config.js";
 
 // Confirmar dados profissionais com o Guilherme antes de publicar
 const infoCards = [
   { label: "Abordagem", value: "Terapia Cognitivo-Comportamental" },
   { label: "Público", value: "Adultos e adolescentes" },
   { label: "Modalidade", value: "Online e presencial" },
-  { label: "CRP", value: "00/00000" },
+  { label: "CRP", value: CRP },
 ];
 
 export default function About() {
@@ -27,7 +27,7 @@ export default function About() {
             Guilherme Almeida
           </h2>
 
-          <p className={styles.role}>Psicólogo · CRP 00/00000</p>
+          <p className={styles.role}>Psicólogo · CRP {CRP}</p>
 
           <p className={styles.bio}>
             Sou psicólogo com foco em Terapia Cognitivo-Comportamental, atuando
@@ -52,7 +52,7 @@ export default function About() {
             ))}
           </ul>
 
-          <a href={WHATSAPP_URL} className={styles.cta}>
+          <a href={WHATSAPP_URL} className={styles.cta} target="_blank" rel="noopener noreferrer">
             Agendar pelo WhatsApp
           </a>
         </div>
