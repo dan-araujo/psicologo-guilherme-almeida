@@ -8,6 +8,9 @@ import SelfCarePractice from "../components/SelfCarePractice/SelfCarePractice";
 import TherapyHelp from "../components/TherapyHelp/TherapyHelp";
 import Approach from "../components/Approach/Approach";
 import About from "../components/About/About";
+import HowItWorks from "../components/HowItWorks/HowItWorks";
+import InterestList from "../components/InterestList/InterestList";
+import InstagramFeed from "../components/InstagramFeed/InstagramFeed.astro";
 
 interface Props {
 	title?: string;
@@ -60,10 +63,15 @@ const ogImage = "/og-image.jpg";
 			<SelfRecognition />
 			<SelfCarePractice />
 			<TherapyHelp />
-			<SectionDivider from="main" to="primary" height={80} />
+			<SectionDivider from="alt" to="primary" height={80} />
 			<Approach />
-			<SectionDivider from="primary" to="main" height={80} />
+			<SectionDivider from="primary" to="alt" height={80} />
 			<About />
+			<HowItWorks />
+			<SectionDivider from="main" to="alt" height={80} />
+			<InterestList />
+			<SectionDivider from="alt" to="main" height={80} />
+			<InstagramFeed />
 			<slot />
 		</main>
 	</body>
