@@ -1,0 +1,50 @@
+---
+import styles from "./InstagramFeed.module.css";
+import {
+    INSTAGRAM_PERSONAL,
+    INSTAGRAM_INSTITUTO,
+    BEHOLD_WIDGET_ID,
+} from "../../config.js";
+---
+
+<section class="instagram" id="instagram" aria-labelledby="instagram-title">
+    <div class={styles.container}>
+        <div class={styles.header}>
+            <span class={styles.eyebrow}>Além do consultório</span>
+            <h2 id="instagram-title" class={styles.title}>
+                Conteúdos sobre autocuidado e saúde emocional
+            </h2>
+            <p class={styles.description}>
+                Reflexões, ferramentas e conteúdos sobre saúde mental e
+                psicologia comportamental direto no seu feed.
+            </p>
+        </div>
+
+        <div id={`behold-widget-${BEHOLD_WIDGET_ID}`} class={styles.feed}></div>
+
+        <div class={styles.links}>
+            <span class={styles.linksLabel}>Acompanhar no Instagram</span>
+            <div class={styles.handles}>
+            <a
+                href={INSTAGRAM_PERSONAL}
+                target="_blank"
+                rel="noopener noreferrer"
+                class={styles.linkInstagram}
+            >
+                @guilhermeopsi
+            </a>
+            <span class={styles.linksSeparator} aria-hidden="true">·</span>
+            <a
+                href={INSTAGRAM_INSTITUTO}
+                target="_blank"
+                rel="noopener noreferrer"
+                class={styles.linkInstagram}
+            >
+                @almeidainstituto
+            </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://w.behold.so/widget.js" type="module"></script>
