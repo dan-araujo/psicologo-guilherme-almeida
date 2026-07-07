@@ -1,0 +1,141 @@
+.section {
+    background: var(--color-background-alt);
+    padding: 96px 0;
+}
+
+.container {
+    width: min(100% - 48px, var(--container-width));
+    margin: 0 auto;
+}
+
+.header {
+    max-width: 600px;
+    margin: 0 auto 64px;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: var(--color-secondary);
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin: 0 0 16px;
+}
+
+.description {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: rgba(36, 60, 72, 0.72);
+    margin: 0;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.item {
+    border-top: 1px solid var(--color-border);
+}
+
+.item:last-child {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+    transition: color 180ms ease;
+}
+
+.question:hover {
+    color: var(--color-secondary);
+}
+
+.icon {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-secondary);
+    flex-shrink: 0;
+    transition: transform 280ms ease;
+    line-height: 1;
+}
+
+.iconOpen {
+    transform: rotate(45deg);
+}
+
+.answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 280ms ease;
+}
+
+.answerOpen {
+    grid-template-rows: 1fr;
+}
+
+.answerInner {
+    overflow: hidden;
+}
+
+.answerText {
+    font-size: 0.97rem;
+    line-height: 1.75;
+    color: rgba(36, 60, 72, 0.72);
+    padding-bottom: 24px;
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: 72px 0;
+    }
+
+    .header {
+        margin-bottom: 48px;
+    }
+
+    .question {
+        font-size: 0.95rem;
+        padding: 20px 0;
+    }
+}
