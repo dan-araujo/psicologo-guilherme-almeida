@@ -12,6 +12,7 @@ import HowItWorks from "../components/HowItWorks/HowItWorks";
 import InterestList from "../components/InterestList/InterestList";
 import InstagramFeed from "../components/InstagramFeed/InstagramFeed.astro";
 import FAQ from "../components/FAQ/FAQ";
+import CTAFinal from "../components/CTAFinal/CTAFinal";
 
 interface Props {
 	title?: string;
@@ -73,6 +74,8 @@ const ogImage = "/og-image.jpg";
 			<InstagramFeed />
 			<SectionDivider from="main" to="alt" height={80} />
 			<FAQ client:visible />
+			<SectionDivider from="alt" to="primary" height={80} />
+			<CTAFinal />
 			<slot />
 		</main>
 	</body>
