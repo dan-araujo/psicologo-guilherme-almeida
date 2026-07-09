@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Header.module.css";
+import logoImg from "../../assets/images/logo-wbg.png";
 
 const navLinks = [
   { label: "Início", href: "#home" },
@@ -27,8 +28,8 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <a href="#inicio" className={styles.brand} onClick={closeMenu}>
-          <span className={styles.brandName}>Guilherme Almeida</span>
+        <a href="#home" className={styles.brand} onClick={closeMenu}>
+          <img src={logoImg.src} alt="Guilherme Almeida Psicólogo" className={styles.logo} />
         </a>
 
         <nav className={styles.desktopNav} aria-label="Navegação principal">

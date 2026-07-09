@@ -1,0 +1,69 @@
+<svg viewBox="0 0 280 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Guilherme Alves de Almeida — Psicólogo">
+
+  <defs>
+    <clipPath id="headClip">
+      <circle cx="140" cy="92" r="58"/>
+    </clipPath>
+  </defs>
+
+  <!-- Blob orgânico atrás da cabeça -->
+  <ellipse cx="132" cy="96" rx="80" ry="90"
+           fill="#6c9185" opacity="0.22"
+           transform="rotate(-12 132 96)"/>
+
+  <!-- Pequeno oval decorativo -->
+  <ellipse cx="207" cy="68" rx="9" ry="7"
+           fill="none" stroke="#6c9185" stroke-width="1.5" opacity="0.45"/>
+
+  <!-- Círculo da cabeça -->
+  <circle cx="140" cy="92" r="58"
+          fill="none" stroke="#365a6c" stroke-width="2"/>
+
+  <!-- Perfil facial simplificado (virado para direita) -->
+  <path d="M 150,36
+           C 163,44 170,60 168,74
+           C 166,84 162,89 164,99
+           C 166,111 161,120 154,128
+           C 147,137 140,141 136,145"
+        fill="none" stroke="#365a6c" stroke-width="1.5"
+        stroke-linecap="round" opacity="0.55"
+        clip-path="url(#headClip)"/>
+
+  <!-- Símbolo Ψ -->
+  <text x="132" y="112"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="46" font-weight="400"
+        text-anchor="middle"
+        fill="#365a6c">Ψ</text>
+
+  <!-- Linha separadora sutil -->
+  <line x1="48" y1="173" x2="232" y2="173"
+        stroke="#6c9185" stroke-width="0.7" opacity="0.4"/>
+
+  <!-- G inicial decorativa -->
+  <text x="47" y="222"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="64" font-style="italic" font-weight="400"
+        fill="#365a6c">G</text>
+
+  <!-- UILHERME -->
+  <text x="108" y="219"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="27" font-weight="400" letter-spacing="1"
+        fill="#365a6c">UILHERME</text>
+
+  <!-- ALVES DE ALMEIDA -->
+  <text x="140" y="242"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="11.5" letter-spacing="5" font-weight="400"
+        fill="#365a6c">ALVES DE ALMEIDA</text>
+
+  <!-- CRP -->
+  <text x="140" y="261"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="9.5" letter-spacing="3"
+        fill="#6c9185">CRP: 02/23035</text>
+
+</svg>
