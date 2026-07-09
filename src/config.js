@@ -7,7 +7,7 @@ export const ALMEIDA_INSTITUTO_GROUP = "https://chat.whatsapp.com/BRV3RS6QY0d8Py
 
 export const INSTAGRAM_PERSONAL = "https://www.instagram.com/guilhermeopsi/";
 export const INSTAGRAM_INSTITUTO = "https://www.instagram.com/almeidainstituto/";
-export const BEHOLD_WIDGET_ID = "";
+export const BEHOLD_WIDGET_ID = "j6Q92QfUEyca1YZIbqr1";
 
 export const CRP = "02/23035";
 
