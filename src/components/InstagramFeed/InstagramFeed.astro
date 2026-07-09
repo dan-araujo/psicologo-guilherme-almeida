@@ -49,9 +49,29 @@ import {
 
 <script is:inline>
   (() => {
-    const d = document, s = d.createElement("script");
-    s.type = "module";
-    s.src = "https://w.behold.so/widget.js";
-    d.head.append(s);
+    let loaded = false;
+    const load = () => {
+      if (loaded) return;
+      loaded = true;
+      const s = document.createElement("script");
+      s.type = "module";
+      s.src = "https://w.behold.so/widget.js";
+      document.head.append(s);
+    };
+
+    const target = document.getElementById("instagram");
+    // Fallback: sem IntersectionObserver ou sem alvo, carrega como antes.
+    if (!target || !("IntersectionObserver" in window)) {
+      load();
+      return;
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) {
+        io.disconnect();
+        load();
+      }
+    }, { rootMargin: "600px" });
+    io.observe(target);
   })();
 </script>

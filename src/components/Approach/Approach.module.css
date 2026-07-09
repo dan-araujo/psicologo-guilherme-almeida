@@ -20,7 +20,7 @@
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--color-secondary);
+    color: var(--color-secondary-on-dark);
     margin-bottom: 16px;
 }
 
@@ -83,7 +83,7 @@
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.1em;
-    color: var(--color-secondary);
+    color: var(--color-secondary-on-dark);
 }
 
 .pillarTitle {
