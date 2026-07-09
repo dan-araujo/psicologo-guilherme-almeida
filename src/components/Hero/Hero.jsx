@@ -1,5 +1,5 @@
 import styles from "./Hero.module.css";
-import { WHATSAPP_URL, CRP } from "../../config.js";
+import { WHATSAPP_URL } from "../../config.js";
 
 export default function Hero() {
   return (
@@ -22,9 +22,11 @@ export default function Hero() {
             <span>Psicólogo</span>
             <span>Terapia Cognitivo-Comportamental</span>
             <span>Análise do Comportamento</span>
-            <span>Direcionada a Orientação Parental</span>
             <span>Terapia dos Esquemas</span>
-            <span>CRP {CRP}</span>
+            <span>Transtorno de humor</span>
+            <span>Ansiedade</span>
+            <span>Depressão</span>
+            <span>Estresse</span>
           </div>
 
           <div className={styles.actions}>

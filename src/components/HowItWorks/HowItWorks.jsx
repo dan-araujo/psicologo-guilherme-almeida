@@ -8,7 +8,7 @@ const steps = [
       "Entre em contato pelo WhatsApp. Combinamos um horário e você me conta um pouco sobre o que está vivendo.",
   },
   {
-    title: "Sessão inicial",
+    title: "Sessão de atendimento",
     description:
       "Nos encontramos pela primeira vez. Escuto sua história com atenção e entendemos juntos o que trouxe você até aqui.",
   },

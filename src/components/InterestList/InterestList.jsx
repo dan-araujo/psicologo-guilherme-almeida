@@ -48,7 +48,7 @@ export default function InterestList() {
                     </p>
                 </div>
 
-                <div className={styles.card} aria-hidden="true">
+                <div className={styles.card}>
                     <span className={styles.cardTag}>Presencial · Recife</span>
                     <h3 className={styles.cardTitle}>
                         Análise do Comportamento Aplicada
