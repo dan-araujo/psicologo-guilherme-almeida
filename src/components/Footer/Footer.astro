@@ -12,7 +12,7 @@ const currentYear = new Date().getFullYear();
 
             <div class={styles.logoCol}>
                 <a href="#home" aria-label="Voltar ao topo">
-                    <img src={logoWhite.src} alt="Guilherme Alves de Almeida Psicólogo" class={styles.footerLogo} />
+                    <img src={logoWhite.src} width={logoWhite.width} height={logoWhite.height} loading="lazy" decoding="async" alt="Guilherme Alves de Almeida Psicólogo" class={styles.footerLogo} />
                 </a>
             </div>
 
@@ -33,7 +33,7 @@ const currentYear = new Date().getFullYear();
                     <span>WhatsApp</span>
                 </a>
 
-                <a href={INSTAGRAM_PERSONAL} target="_blank" rel="noopener noreferrer" class={styles.iconLink} aria-label="Instagram pessoal">
+                <a href={INSTAGRAM_PERSONAL} target="_blank" rel="noopener noreferrer" class={styles.iconLink} aria-label="Instagram pessoal @guilhermeopsi">
                     <span class={styles.igPersonal}>
                         <svg class={styles.icon} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                             <rect x="2" y="2" width="20" height="20" rx="5"/>
@@ -44,7 +44,7 @@ const currentYear = new Date().getFullYear();
                     <span>@guilhermeopsi</span>
                 </a>
 
-                <a href={INSTAGRAM_INSTITUTO} target="_blank" rel="noopener noreferrer" class={styles.iconLink} aria-label="Instagram Instituto Almeida">
+                <a href={INSTAGRAM_INSTITUTO} target="_blank" rel="noopener noreferrer" class={styles.iconLink} aria-label="Instagram Instituto Almeida @almeidainstituto">
                     <span class={styles.igInstituto}>
                         <svg class={styles.icon} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                             <rect x="2" y="2" width="20" height="20" rx="5"/>

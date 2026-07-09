@@ -1,12 +1,12 @@
 import styles from "./About.module.css";
-import guilhermePhoto from "../../assets/images/foto-guilherme.jpg";
+import guilhermePhoto from "../../assets/images/foto-guilherme.webp";
 import { WHATSAPP_URL, CRP } from "../../config.js";
 
 // Confirmar dados profissionais com o Guilherme antes de publicar
 const infoCards = [
   { label: "Abordagem", value: "Terapia Cognitivo-Comportamental" },
-  { label: "Público", value: "Adultos e adolescentes" },
-  { label: "Modalidade", value: "Online e presencial" },
+  { label: "Público", value: "Adultos" },
+  { label: "Modalidade", value: "Online" },
   { label: "CRP", value: CRP },
 ];
 
@@ -31,7 +31,7 @@ export default function About() {
 
           <p className={styles.bio}>
             Sou psicólogo com foco em Terapia Cognitivo-Comportamental, atuando
-            no atendimento de adultos e adolescentes. Meu trabalho é oferecer um
+            no atendimento de adultos. Meu trabalho é oferecer um
             espaço de escuta e acolhimento para quem busca compreender melhor
             suas emoções, lidar com desafios do cotidiano e construir estratégias
             mais conscientes para o dia a dia.
@@ -63,6 +63,10 @@ export default function About() {
               <div className={styles.imagePlaceholder}>
                 <img
                   src={guilhermePhoto.src}
+                  width={guilhermePhoto.width}
+                  height={guilhermePhoto.height}
+                  loading="lazy"
+                  decoding="async"
                   alt="Guilherme Almeida, psicólogo"
                   className={styles.photo}
                 />
